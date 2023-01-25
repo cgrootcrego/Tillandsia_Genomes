@@ -6,11 +6,6 @@ Gene annotation steps:
 1. Prepare input for braker: splice information and busco protein sequences
 2. Run braker on the assembly using splice-info from mapping and busco proteins
 3. Prepare input for maker:
-- complex repeat gff
-- EDTA library of te families in tillandsia + monocots
-- build EST from RNAseq + mask potential TE sequences
-- Prepare protein dataset: ananas + swissprot manually curated
-- Put in augustus species from BRAKER
 4. Run maker 1 / 2 times
 5. Calculate number of genes, average length, busco score on transcripts, TE content, map RNAseq back to gene models, do feature counts ...
 6. If necessary, make subset based on TE content
@@ -22,7 +17,7 @@ Gene annotation steps:
 
 The input for braker is a soft-masked version of the assembly (See 2a. TE annotation), the splice information from RNA-seq mapping and single copy proteins predicted during BUSCO.
 
-1.1. Splice information extraction:
+## 1.1. Splice information extraction:
 
 Map RNA-seq to assembly:
 
@@ -42,7 +37,7 @@ Extract splice info:
 
 	/apps/augustus/3.3.3/bin/bam2hints --in [File.Aligned.sortedByCoord.out.bam] --out [splice_info_from_rna.gff]
 
- 1.2. BUSCO protein sequences:
+## 1.2. BUSCO protein sequences:
 
   busco -i [hardmasked_genome] -o [output_name] -l liliopsida -m genome --long --augustus_parameters='--progress=true' -c 24
 
@@ -53,29 +48,28 @@ The protein files in busco/sequences/single_copy_sequences (.faa) were concatena
 
 # 2. Running Braker
 
-Braker was run on the VSC4 using 32 cores with the following command:
-source /home/fs71400/grootcrego/.bashrc
-conda activate braker-env
-braker.pl --species=Tleiboldiana --genome=tillandsia_leiboldiana_assembly.Softmasked.fasta --softmasking --hints=splice_info_from_rna_leiboldiana.gff --prot_seq=single_copy_protein_hints_busco_leiboldiana.faa --prg=gth --gth2traingenes --cores=32 --gff3
+Braker was run with the following command (example of *T. leiboldiana*):
 
-This braker run resulted in 88,401 genes - 91,545 if accounting for alternative splicing (mRNA's). I ran BUSCO on the augustus.hints.codingseq fastafile in transcriptome mode with following command:
-busco -i augustus.hints.codingseq -o busco_Tleiboldiana_braker_pred -l /home/fs71400/grootcrego/busco_downloads/lineages/liliopsida_odb10 -m transcriptome -c 16
+	source /home/fs71400/grootcrego/.bashrc
+	conda activate braker-env
+	braker.pl --species=[Tleiboldiana] --genome=tillandsia_leiboldiana_assembly.Softmasked.fasta --softmasking --hints=splice_info_from_rna_leiboldiana.gff --prot_seq=single_copy_protein_hints_busco_leiboldiana.faa --prg=gth --gth2traingenes --cores=32 --gff3
 
-The gene models from Braker had 87.1 % BUSCO's, with 11 % duplicated. This is a fine score, but similarly to our observation with T. fasciculata, we get an overestimation of genes, possibly due to TEs active in the RNA-seq data. By feeding this into Maker with proper information on TEs, we might get a better gene model estimate without declining our BUSCO scores.
+BUSCO was run on the augustus.hints.codingseq fastafile with following command:
 
+	busco -i augustus.hints.codingseq -o busco_Tleiboldiana_braker_pred -l /home/fs71400/grootcrego/busco_downloads/lineages/liliopsida_odb10 -m transcriptome -c 16
 
-2.3. Preparing files for Maker
----
-For T. fasciculata, we used the following input files for Maker:
+# 3. Preparing files for Maker
+
+We used the following input files for Maker:
 - EST library, masked for complex repeats
 - gff with complex repeats from EDTA
 - Braker gene models
 - Ananas and monocot curated protein sequences
 - TE library from EDTA + Giri Monocot DB
 
-Most of these files are readily available, but a few we still have to generate. Additionally, we can now also add T. fasciculata input to improve gene models in T. leiboldiana, for example in the protein sequences.
 
-  - EST library:
+## 3.1 EST library
+
 Transcriptome assembly was done previously with Trinity (see Notebook entry "transcriptome assembly" from 06.02.2020). Yet, we have learned from T. fasciculata that these may contain active TE sequences, and therefore we will pass it through repeatmasker once. We only mask complex repeats, as simple repeats can be part of genic regions. The command used to generate a masked assembly:
   RepeatMasker -pa 4 -e ncbi -dir . -gff -nolow -lib /proj/grootcrego/Genome_assemblies/leiboldiana/3_masked_assembly/TE_families_EDTA_T.leiboldiana_KnownOnly.fasta leiboldiana_transcriptome_assembly.fasta
 
