@@ -1,5 +1,5 @@
 #-----Genome (these are always required)
-genome=/home/fs71400/grootcrego/Tlei_assembly/tillandsia_leiboldiana_assembly.pilon.upper.sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
+genome=tillandsia_leiboldiana_assembly.pilon.upper.sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
 organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
 
 #-----Re-annotation Using MAKER Derived GFF3
@@ -13,20 +13,20 @@ pred_pass=0 #use ab-initio predictions in maker_gff: 1 = yes, 0 = no
 other_pass=0 #passthrough anyything else in maker_gff: 1 = yes, 0 = no
 
 #-----EST Evidence (for best results provide a file for at least one)
-est=/home/fs71400/grootcrego/Tlei_assembly/leiboldiana_transcriptome_assembly.fasta.masked #set of ESTs or assembled mRNA-seq in fasta format
+est=leiboldiana_transcriptome_assembly.fasta.masked #set of ESTs or assembled mRNA-seq in fasta format
 altest= #EST/cDNA sequence file in fasta format from an alternate organism
 est_gff= #aligned ESTs or mRNA-seq from an external GFF3 file
 altest_gff= #aligned ESTs from a closly relate species in GFF3 format
 
 #-----Protein Homology Evidence (for best results provide a file for at least one)
-protein=/gpfs/data/fs71400/grootcrego/maker_Tlei/Tfasciculata_Acomosus_F135_CB5_swissprot_monocot_proteins.fasta #protein sequence file in fasta format (i.e. from mutiple oransisms)
+protein=Tfasciculata_Acomosus_F135_CB5_swissprot_monocot_proteins.fasta #protein sequence file in fasta format (i.e. from mutiple oransisms)
 protein_gff=  #aligned protein homology evidence from an external GFF3 file
 
 #-----Repeat Masking (leave values blank to skip repeat masking)
 model_org=simple #select a model organism for RepBase masking in RepeatMasker
-rmlib=/gpfs/data/fs71400/grootcrego/maker_Tlei/TE_families_EDTA_T.leiboldiana_KnownOnly_AND_Giri_monocot_TE-DB.fasta #provide an organism specific repeat library in fasta format for RepeatMasker
+rmlib=TE_families_EDTA_T.leiboldiana.fasta #provide an organism specific repeat library in fasta format for RepeatMasker
 repeat_protein= #provide a fasta file of transposable element proteins for RepeatRunner
-rm_gff=/gpfs/data/fs71400/grootcrego/maker_Tlei/tillandsia_leiboldiana_EDTA_knownTEsonly.fasta.mask.complex.reformat.gff3 #pre-identified repeat elements from an external GFF3 file
+rm_gff=tillandsia_leiboldiana_EDTA_knownTEsonly.fasta.mask.complex.reformat.gff3 #pre-identified repeat elements from an external GFF3 file
 prok_rm=0 #forces MAKER to repeatmask prokaryotes (no reason to change this), 1 = yes, 0 = no
 softmask=1 #use soft-masking rather than hard-masking in BLAST (i.e. seg and dust filtering)
 
@@ -35,7 +35,7 @@ snaphmm= #SNAP HMM file
 gmhmm= #GeneMark HMM file
 augustus_species=Tleiboldiana #Augustus gene prediction species model
 fgenesh_par_file= #FGENESH parameter file
-pred_gff=/home/fs71400/grootcrego/braker_Tlei/run_braker_leiboldiana_assembly/augustus.hints.gff3
+pred_gff=run_braker_leiboldiana_assembly/augustus.hints.gff3
  #ab-initio predictions from an external GFF3 file
 model_gff= #annotated gene models from an external GFF3 file (annotation pass-through)
 est2genome=1 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
@@ -73,4 +73,3 @@ tries=8 #number of times to try a contig if there is a failure for some reason
 clean_try=0 #remove all data from previous run before retrying, 1 = yes, 0 = no
 clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
 TMP=/gpfs/data/fs71400/grootcrego/maker_Tlei #specify a directory other than the system default temporary directory for temporary files
-
