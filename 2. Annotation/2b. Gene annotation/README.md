@@ -156,6 +156,6 @@ We renamed our final set using MAKER tools:
 	map_fasta_ids maker.name.map maker.transcripts.fasta
 	map_fasta_ids maker.name.map maker.proteins.fasta
 
-2.10. Functional annotation in Blast2Go
-----
+# 7. Functional annotation in Blast2Go
+
 We loaded all CDS information onto Blast2Go and ran all steps with default settings (viridiplantae DB for blast).
