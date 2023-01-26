@@ -25,26 +25,7 @@ Orthofinder was run with version 2.4.1. with the following command:
 
  **3) Compiling orthology and annotation results**
 
-For the global run, I wanted to compile orthology information per gene with its location in the genome. First, I converted the N0.tsv file to a per-gene format which lists for each gene it's orthogroup and the orthogroup gene counts per species. Using the python script This was done by running the script `script_make_per_gene_og_table_calculate_counts.py` on N0.tsv.
-
-NOTE: In previous runs I created the per-gene orthology table by combining the N0.tsv file with the Orthogroups.GeneCounts.tsv file. However, the counts in the latter file don't agree with the genes reported in the former since they stem from different approaches. So the newest version, counts are immediately calculated from N0.tsv in the python script, since results from the Orthogroups/ folder are deprecated.
-
-Since I am not interested in A.comosus specific orthogroups, these were removed from the new table:
-
-    awk '!($4 == 0 && $5 == 0) {print $0}' \
-    orthogroups_Tfas_Tlei_Acom.per_gene.txt > \
-	orthogroups_Tfas-Tlei-Acom.no_Acom_specific_og.txt
-
-This results in 20,507 orthogroups and 86,017 genes (31,551 Tfas genes, 32,568 Tlei genes, 21,898 Acom genes).
-
-Then, I ran the script `script_compile_gff_info_og_table_all_species.py` to obtain the final per-gene table compiling location and orthology information:
-
-	python2 compile_pergene_orthology_gff_ino.py \
-	orthogroups_Tfas-Tlei-Acom.no_Acom_specific_og.txt \
-	Tillandsia_leiboldiana_v1.2.edited_allfeatures.gff \
-	Tillandsia_fasciculata_v1.2.edited_allfeatures.gff \
-	Acom_annotation.txt orthogroups_Tfas-Tlei-Acom.full-set.no_Acom_specific_og.all_info.txt
-
+Orthology and annotation info per gene was compiled from the N0.tsv file and gff file with the scripts  `script_make_per_gene_og_table_calculate_counts.py` and`script_compile_gff_info_og_table_all_species.py`.
 
 **4) Analyzing the spatial and length distribution of global orthogroups**
 
@@ -53,7 +34,7 @@ With this final table, I investigated where orthologous gene are mostly found in
     grep "Tlei" orthogroups_Tfas-Tlei-Acom.full-set.no_Acom_specific_og.all_info.txt > Tlei_orthology_info.txt
     grep "Tfas"  orthogroups_Tfas-Tlei-Acom.full-set.no_Acom_specific_og.all_info.txt > Tfas_orthology_info.txt
 
-Lastly I added scaffolds lengths to these files and reshuffled the columns a bit to make it more logical for the next step with `add_scaffold_lengths.py`.
+I added scaffolds lengths to these files and reshuffled the columns a bit to make it more logical for the next step with `add_scaffold_lengths.py`.
 
 The actual analysis was done in the Rscript `Analyze_global_orthogroups.R`. The analysis showed that more than 99 % of 1-to-1 orthologs are on the main scaffolds in both assemblies. This also led to the inclusion of the 26th scaffold in *T. leiboldiana*, as it contained a non-negligible amount of orthologs.
 
