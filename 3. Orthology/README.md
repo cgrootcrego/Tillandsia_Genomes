@@ -29,62 +29,47 @@ Orthology and annotation info per gene was compiled from the N0.tsv file and gff
 
 **4) Analyzing the spatial and length distribution of global orthogroups**
 
-With this final table, I investigated where orthologous gene are mostly found in the genome and how long they are. To do this, I separated the Tlei and Tfas genes in separate files:
+Genes of different species were placed in separate files:
 
     grep "Tlei" orthogroups_Tfas-Tlei-Acom.full-set.no_Acom_specific_og.all_info.txt > Tlei_orthology_info.txt
     grep "Tfas"  orthogroups_Tfas-Tlei-Acom.full-set.no_Acom_specific_og.all_info.txt > Tfas_orthology_info.txt
 
-I added scaffolds lengths to these files and reshuffled the columns a bit to make it more logical for the next step with `add_scaffold_lengths.py`.
+Scaffolds lengths were added with `add_scaffold_lengths.py`.
 
-The actual analysis was done in the Rscript `Analyze_global_orthogroups.R`. The analysis showed that more than 99 % of 1-to-1 orthologs are on the main scaffolds in both assemblies. This also led to the inclusion of the 26th scaffold in *T. leiboldiana*, as it contained a non-negligible amount of orthologs.
+The actual analysis was done in the Rscript `Analyze_global_orthogroups.R`.
 
 # Second run: Only gene models on main scaffolds (> 1 Mb) for T.fas and T. lei, all gene models of A.comosus
 
-With the aim of studying synteny and gene family evolution between Tfas and Tlei, I decided to narrow down our list of genes to those which lie on the main scaffolds of the Tfas and Tlei assemblies. This way, we will avoid the presence of hidden TEs, as those are more likely to lie on rogue scaffolds.
+With the aim of studying synteny and gene family evolution, we reran Orthofinder for genes on the main scaffolds of the Tfas and Tlei assemblies.
 
-**1) Input sequences and a bit of filtering**
+**1) Input sequences**
 
-To select the genes on those scaffolds, I made a list with the names of the main scaffolds `25_largest_scaffolds`:
-
-    awk '$3 == "mRNA" {print $0}' Tillandsia_fasciculata_v1.2.edited.gff | grep -f 25_largest_scaffolds > \
-	mRNA_entries_on_25_largest_scaffolds
-
-Then, I selected these from the maker peptide file by extracting the feature ID and selecting the fasta-sequences matching these ID's:
-
-    cut -f 9 mRNA_entries_on_25_largest_scaffolds | sed 's/;/\t/g' | cut -f 1 | sed 's/ID=//g' > \
-    mRNA_entries_on_25_largest_scaffolds_IDonly
-    seqkit grep -f mRNA_entries_on_25_largest_scaffolds_IDonly \
-	Tillandsia_fasciculata_v1.all.proteins.fasta >  Tillandsia_fasciculata_v1.25chrom.proteins.fasta
-
-I filtered out shorter isoforms (of which there were very few) and also peptide sequences < 40 amino acids.
+I filtered out shorter isoforms and also peptide sequences < 40 amino acids.
 The longest isoform was selected using the script `select_longest_isoform.py`.
 Peptide sequences < 40 AA were filtered out with the following lines of code:
 
-    awk '$2 > 40 {print $0}' \
-    Tillandsia_fasciculata_v1.25chrom.longest_isoforms.proteins.fasta.fai \
+	# select peptides longer than 40 AA
+	awk '$2 > 40 {print $0}' \
+	Tillandsia_fasciculata_v1.25chrom.longest_isoforms.proteins.fasta.fai \
 	| cut -f 1 > proteins.w.min40AA
-    seqkit grep -f proteins.w.min.40.AA \
+
+	seqkit grep -f proteins.w.min.40.AA \
 	Tillandsia_fasciculata_v1.25chrom.longest_isoforms.proteins.fasta > \
 	Tillandsia_fasciculata_v1.25chrom.longest_isoforms.min40AA.proteins.fasta
 
-I moved these sequences to the orthofinder files in scratch under the new run folder run_orthofinder_Tfas_Tlei_Acom_25_scaffolds, where I renamed all protein files to easier names (T.fasciculata.fa, T.leiboldiana.fa, A.comosus.fa). Orthofinder was run with the same command as shown above.
+**2) Running OrthoFinder**
 
-**2) Compiling orthology with gff info and functional annotations, plus a bit more filtering**
+Orthofinder was run with the same command as above.
 
-This time, I did not remove the Acomosus information from the results file, though I did eliminate all orthogroups that have no orthologues in T.lei and T.fas (specific to A.comosus):
+**3) Compiling orthology with gff info and functional annotations, plus a bit more filtering**
+
+Remove orthogroups unique to *A. comosus*:
+
 `awk '!($3 == 0 && $4 == 0) {print $0}' Orthogroups.GeneCount.tsv > orthogroup_counts_no_Acom_specific_og.txt`
-This removed 553 orthogroups from the file. The orthogroup IDs in this file were then used to select non-pineapple specific orthogroups from N0.tsv.
 
-IMPORTANT: because of the nature of the N0.tsv file, which contains nested HOG and does not agree with the files in the Orthogroups directory, I made significant changes to the script make_og_table.py. Previously, this table compiled information from N0.tsv (the genes in each orthogroup) with the information in Orthogroups.Genecounts.tsv (the counts of each orthogroup). After careful examination I realized these two files don't agree, since they stem from different approaches and the Orthogroups output is deprecated. Therefore, I generated the python script `script_make_per_gene_og_table_calculate_counts.mainscaffolds.py` that manually counted the number of genes per species in each orthogroup and appended this to the per-gene table
+Gff info and orthogroup info were compiled with `script_compile_gff_info_with_og_table_all_species.py`:
 
-I then ran a more elaborate version of the compiling script which adds functional descriptions and gff file information for genes from all 3 species at once, named `script_compile_gff_info_with_og_tanle_all_species.mainscaffolds.py`:
-
-    python2 ../make_big_og_table_all_info.py \
-	orthogroups_no_Acom_specific_og.per_gene.txt Tillandsia_leiboldiana_v1.2.edited_allfeatures.gff \
-	Tillandsia_fasciculata_v1.2.edited_allfeatures.gff Acom_annotation \
-	orthogroups_Tfas_Tlei_Acom.per_gene.with_functional_info.txt
-
-I then searched for all orthogroups containing genes with TE description, by searching for the words:
+All orthogroups containing genes with TE description were removed, by searching for the words:
 
     transposable
     transposon
@@ -94,11 +79,11 @@ I then searched for all orthogroups containing genes with TE description, by sea
     Pro-Pol polyprotein
     virus
 
-There were 1034 genes with these descriptions belonging to 264 orthogroups. I obtained the IDs of these orthogroups and then removed them from the table :
+I obtained the IDs of these orthogroups and then removed them from the table :
 
 	grep -f tes orthogroups_Tfas_Tlei_Acom.per_gene.with_functional_info.txt | cut -f 7 | \
 	sort | uniq > orthogroups_containing_TES
-    grep -v -f orthogroups_containing_TES \
+    	grep -v -f orthogroups_containing_TES \
 	orthogroups_Tfas_Tlei_Acom.per_gene.with_functional_info.txt > orthogroups_Tfas_Tlei_Acom.per_gene.with_functional_info.no_TEs.txt
 
 This removed a total of 6042 genes.
