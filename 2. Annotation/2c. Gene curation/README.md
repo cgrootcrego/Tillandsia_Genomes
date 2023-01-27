@@ -1,0 +1,12 @@
+# Gene curation
+
+Using orthology and expression information (see 3. Orthology, 8. RNA-seq), we added tags to our gene annotation to flag potentially unreliable genes.
+
+We calculated the number of exons, length, absence of start and stop codon (completeness), and expression per gene in both species. This was done with `Script_add_robustness_expression_gff`, which will output the resulting information of orthology, completeness and expression per gene in a list, and also add this information in tags to the gff file.
+
+Rule: a gene is ROBUST, when:
+- The gene is expressed across all exons
+OR
+- The gene has a start and stopcodon
+
+Tags included the orthology of the gene, with "NO_ORTHOLOGY" when the gene was not included in orthology analyses or assigned to an orthogroup. Expression information is shown as a proportion of exons expressed. Lowly expressed exons were considered not expressed (See the script)
