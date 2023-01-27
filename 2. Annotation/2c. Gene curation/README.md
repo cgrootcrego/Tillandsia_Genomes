@@ -9,4 +9,6 @@ Rule: a gene is ROBUST, when:
 OR
 - The gene has a start and stopcodon
 
-Tags included the orthology of the gene, with "NO_ORTHOLOGY" when the gene was not included in orthology analyses or assigned to an orthogroup. Expression information is shown as a proportion of exons expressed. Lowly expressed exons were considered not expressed (See the script)
+Tags included the orthology of the gene, with "NO_ORTHOLOGY" when the gene was not included in orthology analyses or assigned to an orthogroup. Expression information is shown as a proportion of exons expressed. Lowly expressed exons were considered not expressed.
+
+The curation summary displaying the per-gene information on orthology, completeness and expression can be found in `Robustness_checklist_ALLGenes.Tillandsia_fasciculata.txt` and `Robustness_checklist_ALLGenes.Tillandsia_leiboldiana.txt`. The GFF files containing curation tags are `Tillandsia_fasciculata_v1.gff` and `Tillandsia_leiboldiana_v1.gff`.

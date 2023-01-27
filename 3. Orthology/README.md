@@ -85,3 +85,5 @@ I obtained the IDs of these orthogroups and then removed them from the table :
 	sort | uniq > orthogroups_containing_TES
     grep -v -f orthogroups_containing_TES \
 	orthogroups_Tfas_Tlei_Acom.per_gene.with_functional_info.txt > orthogroups_Tfas_Tlei_Acom.per_gene.with_functional_info.no_TEs.txt
+
+The resulting per-gene orthology table is available as `OrthologyInfo.per-gene.AcomTfasTlei.txt`
