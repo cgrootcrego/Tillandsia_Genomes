@@ -82,7 +82,7 @@ For downstream multicopy analyses (GO terms and genes of interest) I made a sele
 
 ## GO term enrichment of multi-copy gene families
 
-GO term enrichment was run on (i) all multicopy genes, (ii) a subset of genes belonging to families where copy number was larger in Tfas and (iii) on a subset of genes belonging to families where copy number was larger in Tlei. This can give us an idea of the direction in which certain functions have had gene family expansion. This was done with the automated script `script_GO_term)enrichment.R`
+GO term enrichment was run on (i) all multicopy genes, (ii) a subset of genes belonging to families where copy number was larger in Tfas and (iii) on a subset of genes belonging to families where copy number was larger in Tlei. This can give us an idea of the direction in which certain functions have had gene family expansion. This was done with the automated script `script_GO_term)enrichment.R` and [TopGo](https://bioconductor.org/packages/release/bioc/html/topGO.html).
 
 The top 100 GO terms in each category (BP, MF and CC) were stored alongside with their p-value and underlying orthogroups and genes, as `Enriched_GO_terms_Tfas-Tlei_ALL_multicopy_genes.txt`, `Enriched_GO_terms_multicopy_genes_larger-in-Tfas.txt`, and `Enriched_GO_terms_multicopy_genes_larger-in-Tlei.txt`
 
