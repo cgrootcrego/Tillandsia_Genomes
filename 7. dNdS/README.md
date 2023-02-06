@@ -95,6 +95,8 @@ Mulitple testing correction was performed with `14_script_multiple_testing_corre
 
 The dN/dS results were analyzed with `15_Assessment_dnds_values.R`. Alignments of significant genes were checked with AliView. Additionally, RNA-seq data used for annotation was mapped back to the main scaffolds and visualized in Jbrowse to further assess alignments.
 
+The complete list of per-orthogroup dN/dS ratios, p-values and other info is available at `Tillandsia.pairwise_dNdS.allgenes.FDR0.05.output`.
+
 ## Obtaining per-chromosome dN/dS statistics
 
 To study the general dN/dS distribution across scaffolds, we decided to only work with alignments that had at least 5 variant sites. We obtained this information with [AMAS](https://github.com/marekborowiec/AMAS) and created a list of orthogroups to keep. The dN/dS distribution across all scaffolds and dedicated study of rearranged scaffolds was performed in `16_Script_dNdS_perchrom.R`.
