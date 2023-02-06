@@ -1,7 +1,7 @@
 # Tillandsia-Genomes
 This repository contains the pipelines and scripts that are needed to reproduce the results of the following publication:
 
-Groot Crego, C.; Hess, J.; Yardeni, G.; De La Harpe, M.; Beclin, F.; Cauz-Santos, LA.; Saadain, S.; Barbará, T.; Temsch, EM; Scheeweiss, H.; Barfuss, M.; Till, W.; Lexer, C.; Paun, O.; Leroy, T. Short structural variation fuelled CAM evolution within an explosive bromeliad radiation. BiorXiv (2023).
+[Groot Crego, C.; Hess, J.; Yardeni, G.; De La Harpe, M.; Beclin, F.; Cauz-Santos, LA.; Saadain, S.; Barbará, T.; Temsch, EM; Scheeweiss, H.; Barfuss, M.; Till, W.; Lexer, C.; Paun, O.; Leroy, T. Short structural variation fuelled CAM evolution within an explosive bromeliad radiation. BiorXiv (2023).](https://www.biorxiv.org/content/10.1101/2023.02.01.526631v1)
 
 The repository is subdivided in following categories:
 
@@ -17,7 +17,7 @@ The repository is subdivided in following categories:
 
 **6. Gene-family-evo-tfas-tlei : Gene family evolution using orthogroups between *T. fasciculata* and *T. leiboldiana*.**
 
-**7. dNdS_signatures_of_selection: Calculating dN / dS ratios in orthologous gene pairs between *T. leiboldiana* and *T. fasciculata*.**
+**7. dNdS: Calculating dN / dS ratios in orthologous gene pairs between *T. leiboldiana* and *T. fasciculata*.**
 
 **8. RNA-seq experiment 6 time points: DGE Analyses of a climate chamber experiment to explore expression differences between *T. leiboldiana* and *T. fasciculata*.**
 

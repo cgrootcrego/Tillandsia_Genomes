@@ -1,0 +1,35 @@
+
+dos2unix both_complete.txt
+dos2unix one_complete.txt
+
+sed 's/ \+/\t/g' both_complete.txt > both_complete.sed
+sed 's/ \+/\t/g' one_complete.txt > one_complete.sed
+
+sed 's/"//g' both_complete.sed > both_complete_2.sed
+sed 's/"//g' one_complete.sed > one_complete_2.sed
+
+##filtering:
+awk '$4<200 && $4>-200 && ($5<0.1 && $6<0.1) {print $0}' both_complete_2.sed > orthogroups_stringent_filtering.txt
+
+awk '$4<200 && $4>-200 && ($5<0.1 && $6<0.1) {print $0}' one_complete_2.sed > orthogroups_relaxed_completeness.txt
+
+awk '$4<200 && $4>-200 && ($5>0.1 && $5<0.2 && $6>0.1 && $6<0.2) {print $0}' both_complete_2.sed > orthogroups_relaxed_relative_difference.txt
+
+awk '$4<200 && $4>-200 && ($5>0.1 && $5<0.2 && $6>0.1 && $6<0.2) {print $0}' one_complete_2.sed > orthogroups_relaxed_reldiff_comp.txt
+
+wc -l:
+8751 both_complete_2.sed (contains header line)
+6208 orthogroups_stringent_filtering.txt 
+493 orthogroups_relaxed_relative_difference.txt
+
+4039 one_complete_2.sed (contains header line)
+2569 orthogroups_relaxed_completeness.txt
+316 orthogroups_relaxed_reldiff_comp.txt
+
+
+# random subsetting (same for all filtered sets):
+sort -R orthogroups_stringent_filtering.txt | head -n 200 > subset_orthogroups_stringent_filtering.txt
+
+
+# get orthogroup IDs of random subsets:
+awk '{print $1}' subset_orthogroups_stringent_filtering.txt > IDs_subset_orthogroups_stringent_filtering.txt
