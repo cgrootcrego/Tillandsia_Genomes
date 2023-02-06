@@ -95,11 +95,11 @@ Mulitple testing correction was performed with `14_script_multiple_testing_corre
 
 The dN/dS results were analyzed with `15_Assessment_dnds_values.R`. Alignments of significant genes were checked with AliView. Additionally, RNA-seq data used for annotation was mapped back to the main scaffolds and visualized in Jbrowse to further assess alignments.
 
-# Obtaining per-chromosome dN/dS statistics
+## Obtaining per-chromosome dN/dS statistics
 
 To study the general dN/dS distribution across scaffolds, we decided to only work with alignments that had at least 5 variant sites. We obtained this information with [AMAS](https://github.com/marekborowiec/AMAS) and created a list of orthogroups to keep. The dN/dS distribution across all scaffolds and dedicated study of rearranged scaffolds was performed in `16_Script_dNdS_perchrom.R`.
 
-# Running dN/dS for 1:1:2 and 1:2:1 paralogs
+## Running dN/dS for 1:1:2 and 1:2:1 paralogs
 
 Pairwise tests were also run for duplicated orthogroups that are either 1:1:2 (duplicated *T. leiboldiana*) or 1:2:1 (duplicated in *T. fasciculata*). We decided to be very stringent with this analysis and only work with orthogroups that did not change after size correction (the group is reported as 1:1:2 or 1:2:1 both before and after size correction). This resulted in 108 groups in 1:1:2 and 190 groups in 1:2:1.
 
