@@ -82,7 +82,7 @@ p_delta <- ggplot(extreme_diff_avg, aes(x=species, y=mean_diff, fill=species)) +
 p_delta <- ggplot(extreme_differences, aes(x=species, y=Malate_diff, fill=species)) +
   theme_bw() +
   geom_boxplot(width = 0.6, color = "black", alpha = .8, outlier.shape = NA)+
-  #geom_point(aes(fill = species, alpha = .9),color = "black", shape = 21, position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.5)) +
+  geom_point(aes(fill = species, alpha = .9),color = "black", shape = 21, position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.5)) +
   theme_bw()+
   scale_fill_manual(values = c("T. fasciculata" = "goldenrod", "T. leiboldiana" = "darkgreen")) +
   labs(title="", 
@@ -104,12 +104,15 @@ p_delta_n <- p_delta + theme(legend.position = "none")
 plot <- grid.arrange(p_all_n, grid.arrange(p_delta_n, legend, nrow = 2, heights = c(6, 1)), ncol = 2, widths = c(3.25, 1.75))
 
 ### PCA on all metabolic measurements ###
-dat_pca <- dat_MTIC[,c(17:93)]
-row.names(dat_pca) <- dat_MTIC$Code
-dat_MTIC$species_timepoint <- interaction(dat_MTIC$Species, dat_MTIC$Timepoint)
-dat_MTIC <- dat_MTIC[, c("species_timepoint", names(dat_MTIC)[-ncol(dat_MTIC)])]
+dat_pca_full <- read.csv("Tillandsia_metabolomics_full.SUMMED.csv", header = T, sep = ";")
+summary(dat_pca_full)
+dat_pca <- dat_pca_full[,c(17:65)]
 
-dat_MTIC$species_timepoint <- factor(dat_MTIC$species_timepoint, levels = c("T. fasciculata.D1", "T. fasciculata.D5", "T. fasciculata.D9", "T. fasciculata.N1", "T. fasciculata.N5", "T. fasciculata.N9", "T. leiboldiana.D1", "T. leiboldiana.D5", "T. leiboldiana.D9", "T. leiboldiana.N1", "T. leiboldiana.N5", "T. leiboldiana.N9"))
+row.names(dat_pca) <- dat_pca_full$Code
+dat_pca_full$species_timepoint <- interaction(dat_pca_full$Species, dat_pca_full$Timepoint)
+dat_pca_full <- dat_pca_full[, c("species_timepoint", names(dat_pca_full)[-ncol(dat_pca_full)])]
+
+dat_pca_full$species_timepoint <- factor(dat_pca_full$species_timepoint, levels = c("T. fasciculata.D1", "T. fasciculata.D5", "T. fasciculata.D9", "T. fasciculata.N1", "T. fasciculata.N5", "T. fasciculata.N9", "T. leiboldiana.D1", "T. leiboldiana.D5", "T. leiboldiana.D9", "T. leiboldiana.N1", "T. leiboldiana.N5", "T. leiboldiana.N9"))
 
 res.pca <- prcomp(dat_pca, scale = TRUE)
 # Extract individual level results
@@ -120,7 +123,7 @@ explained_var <- summary(res.pca)$importance["Proportion of Variance", ]
 # Access and scale the loadings
 loadings <- as.data.frame(res.pca$rotation)
 
-pca_plot <- ggplot(dat_MTIC, aes(x = res.ind$coord[, 1], y = res.ind$coord[, 2])) +
+pca_plot <- ggplot(dat_pca_full, aes(x = -res.ind$coord[, 1], y = -res.ind$coord[, 2])) +
   theme_bw() +
   geom_point(aes(fill=species_timepoint), shape = 21, color = "black", size = 3) +
   scale_fill_manual(labels = c("T. fasciculata, D+1", "T. fasciculata, D+5", 
@@ -147,17 +150,19 @@ pca_plot <- ggplot(dat_MTIC, aes(x = res.ind$coord[, 1], y = res.ind$coord[, 2])
   theme(axis.title = element_text(size=12),
         axis.text = element_text(size=10))+
   labs(fill = "Species, timepoint")
-
+dat_pca$Glu
+pca_plot
 # Select the CAM metabolites
-metabolites <- c("Malic.acid..3TMS._MTIC", "Citric.acid..4TMS._MTIC", "Fumaric.acid..2TMS._MTIC", "Glucose..1MEOX...5TMS..BP_MTIC","Fructose..1MEOX...5TMS..BP_MTIC", "Fructose.1.6.diphosphate..1MEOX...7TMS..BP_MTIC", "Sucrose", "Oxaloacetate", "Succinic.acid", "Maltose..1MEOX...8TMS..BP_MTIC", "Glucose.6.phosphate..1MEOX...6TMS..MP_MTIC")
+metabolites <- c("Malic.acid", "Citric.acid", "Fumaric.acid", "Glucose","Fructose", "Fructose.1.6.diphosphate", "Sucrose", "Oxaloacetate", "Succinic.acid", "Maltose", "Glucose.6.phosphate", "Phenylalanine", "Threonine", "Gluconic.acid", "Pyruvic.acid", "Proline","Raffinose", "Trehalose")
 selected_rows <- sapply(rownames(loadings), function(x) any(sapply(metabolites, grepl, x = x)))
 selected_loadings <- loadings[selected_rows, ]
 
-new_names <- c("Citrate", "Fructose", "F-1,6-DP", "Fumarate", "Glucose", "G-6-P", "Malate", "Maltose", "Oxaloacetate", "Succinate", "Sucrose")
+new_names <- c("Citrate", "Fructose", "F-1,6-DP", "Fumarate", "Gluconic acid", "Glucose", "G-6-P", "Malate", "Maltose", "Oxaloacetate", "Phenylalalnine", "Proline", "Pyruvic acid","Raffinose", "Succinate", "Sucrose", "Threonine", "Trehalose")
 
 rownames(selected_loadings) <- new_names
 
 # Define specific coordinates for each label
+scaling_factor <- max(res.ind$coord) / max(loadings) * 1.8
 label_coordinates <- data.frame(
   Label = rownames(selected_loadings),
   x = c(-2.3, -1.0188139,	0.5, -1.5, -1.7, 0.2, -1.8, 1.2, -2.3, 	
@@ -166,15 +171,68 @@ label_coordinates <- data.frame(
         -1.97161838)
 )
 
-pca_plot_m <- pca_plot+
+# Define the offsets
+label_offset_x <- .5
+label_offset_y <- .5
+
+# Apply the offsets conditionally
+selected_loadings$label_offset_x <- ifelse(selected_loadings$PC1 > 0, -label_offset_x, label_offset_x)
+selected_loadings$label_offset_y <- ifelse(selected_loadings$PC2 > 0, -label_offset_y, label_offset_y)
+
+selected_loadings["F-1,6-DP", "label_offset_x"] <- selected_loadings["F-1,6-DP", "label_offset_x"] - .5
+selected_loadings["Oxaloacetate", "label_offset_x"] <- selected_loadings["Oxaloacetate", "label_offset_x"] + 1
+
+pca_plot_m <- pca_plot +
   geom_segment(data = as.data.frame(selected_loadings), 
-               aes(x = 0, y = 0, xend = scaling_factor * PC1, yend = scaling_factor * PC2),
-               arrow = arrow(length = unit(0.2, "cm")),
+               aes(x = 0, y = 0, xend = scaling_factor * -PC1, yend = scaling_factor * -PC2),
+               arrow = arrow(length = unit(0.2, "cm")), 
                alpha = 0.5, color = "blue") +
-  geom_text(data = label_coordinates, 
-            aes(x = x, y = y, label = Label), 
-            size = 3, vjust = 1, hjust = 0.5) 
+  geom_text(data = as.data.frame(selected_loadings), 
+            aes(x = scaling_factor * -PC1 + label_offset_x, y = scaling_factor * -PC2 + label_offset_y, label = rownames(selected_loadings)), 
+            size = 3, vjust = 1, hjust = 0.5)
+
+pca_plot_m
 
 combined_plots <- grid.arrange(arrangeGrob(pca_plot_m), arrangeGrob(plot), ncol = 1, heights = c(3, 2))
-ggsave("Figure2_Metabolomics_boxplot_nodots.png", plot = combined_plots, height = 8, width = 9)
-ggsave("Figure2_Metabolomics_boxplot_nodots.pdf", plot = combined_plots, height = 8, width = 9)
+ggsave("Figure2_Metabolomics_boxplot_dots.09112023.png", plot = combined_plots, height = 8, width = 9)
+ggsave("Figure2_Metabolomics_boxplot_dots.09112023.pdf", plot = combined_plots, height = 8, width = 9)
+
+loadings <- read.table("pca_loadings_summed_controlle.csv", header = T, sep = ";")
+
+# Order Variable by descending order of PC1
+loadings <- loadings %>%
+  arrange(desc(PC1)) %>%
+  mutate(Variable = factor(Variable, levels = Variable))
+
+# Create the plot
+loadings_pc1 <- ggplot(loadings, aes(x = Variable, y = PC1, color = Category)) +
+  geom_point(size = 3) +  # Draw the circles
+  geom_segment(aes(x = Variable, xend = Variable, y = 0, yend = PC1), size = 1) +  # Draw the lines
+  scale_color_manual(labels= c("Aminoacid", "Marker", "Organic Acid", "Sugar"),values = c("#EDC79B", "#713E5A", "#58A4B0", "#CC5803"))+  # Use a color palette
+  ylab("Loadings of PC1") +
+  xlab("") +
+  coord_flip() +  # Make the plot horizontal
+  theme_minimal()  # Use a minimal theme
+
+# Order Variable by descending order of PC2
+loadings <- loadings %>%
+  arrange(desc(PC2)) %>%
+  mutate(Variable = factor(Variable, levels = Variable))
+
+# Create the plot
+loadings_pc2 <- ggplot(loadings, aes(x = Variable, y = PC2, color = Category)) +
+  geom_point(size = 3) +  # Draw the circles
+  geom_segment(aes(x = Variable, xend = Variable, y = 0, yend = PC2), size = 1) +  # Draw the lines
+  scale_color_manual(labels= c("Aminoacid", "Marker", "Organic Acid", "Sugar"),values = c("#EDC79B", "#713E5A", "#58A4B0", "#CC5803"))+  # Use a color palette
+  ylab("Loadings of PC2") +
+  xlab("") +
+  coord_flip() +  # Make the plot horizontal
+  theme_minimal()  # Use a minimal theme
+
+legend <- get_legend(loadings_pc1)
+loadings_pc1_nl <- loadings_pc1 + theme(legend.position = "none")
+loadings_pc2_nl <- loadings_pc2 + theme(legend.position = "none")
+loadings_plot <- grid.arrange(loadings_pc1_nl, loadings_pc2_nl, legend, ncol = 3, widths = c(3, 3, 1))
+
+ggsave("FigureS1_Loadings_PC1-2.pdf", plot = loadings_plot, height = 9, width = 9)
+ggsave("FigureS1_Loadings_PC1-2.png", plot = loadings_plot, height = 9, width = 9)
