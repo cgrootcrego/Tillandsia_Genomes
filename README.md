@@ -1,7 +1,7 @@
 # Tillandsia-Genomes
 This repository contains the pipelines and scripts that are needed to reproduce the results of the following publication:
 
-[Groot Crego, C.; Hess, J.; Yardeni, G.; De La Harpe, M.; Beclin, F.; Cauz-Santos, LA.; Saadain, S.; Barbará, T.; Temsch, EM; Scheeweiss, H.; Barfuss, M.; Till, W.; Lexer, C.; Paun, O.; Leroy, T. Short structural variation fuelled CAM evolution within an explosive bromeliad radiation. BiorXiv (2023).](https://www.biorxiv.org/content/10.1101/2023.02.01.526631v1)
+[Groot Crego, C., Hess, J., Yardeni, G., de La Harpe, M., Priemer, C., Beclin, F., Saadain, S., Cauz-Santos, L.A., Temsch, E.M., Weiss-Schneeweiss, H. and Barfuss, M.H., 2023. CAM evolution is associated with gene family expansion in an explosive bromeliad radiation. bioRxiv](https://www.biorxiv.org/content/10.1101/2023.02.01.526631v2.abstract)
 
 The repository is subdivided in following categories:
 

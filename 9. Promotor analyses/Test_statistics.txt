@@ -1,0 +1,431 @@
+-------------------
+T. FASCICULATA ALL DE GENES
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.32275261465836486
+Genes of Interest median: 0.0, mean: 0.3132832080200501
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.7409606736521968
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              6265      18308
+Genes of Interest        198        600
+Chi-square statistic: 0.15586074162526428, P-value from Chi-square test: 0.6929963822812915
+
+For column 'EE':
+Background median: 0.0, mean: 0.18711594025963454
+Genes of Interest median: 0.0, mean: 0.22180451127819548
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.23112927265955474
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3963      20610
+Genes of Interest        148        650
+Chi-square statistic: 3.1548673814613553, P-value from Chi-square test: 0.07570084224224981
+
+For column 'CBS':
+Background median: 0.0, mean: 0.210637691775526
+Genes of Interest median: 0.0, mean: 0.24937343358395989
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.06228889024801831
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              4498      20075
+Genes of Interest        178        620
+Chi-square statistic: 7.966429655134811, P-value from Chi-square test: 0.004765283842426944
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.36873804582265085
+Genes of Interest median: 0.0, mean: 0.37218045112781956
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.5208256274934064
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5881      18692
+Genes of Interest        204        594
+Chi-square statistic: 1.0402246050146926, P-value from Chi-square test: 0.30776924048293564
+
+-------------------
+T. LEIBOLDIANA ALL DE GENES
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.3449586860647843
+Genes of Interest median: 0.0, mean: 0.33055555555555555
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.8333096359180316
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5340      14387
+Genes of Interest        193        527
+Chi-square statistic: 0.012969050446373549, P-value from Chi-square test: 0.9093315416566914
+
+For column 'EE':
+Background median: 0.0, mean: 0.2351092411415826
+Genes of Interest median: 0.0, mean: 0.2722222222222222
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.13255548075151508
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3921      15806
+Genes of Interest        167        553
+Chi-square statistic: 4.5760806470590305, P-value from Chi-square test: 0.03242129057677628
+
+For column 'CBS':
+Background median: 0.0, mean: 0.21027018806711614
+Genes of Interest median: 0.0, mean: 0.23055555555555557
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.2790639324785018
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3613      16114
+Genes of Interest        150        570
+Chi-square statistic: 2.7683916829573736, P-value from Chi-square test: 0.09614271782420573
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.3861712373903787
+Genes of Interest median: 0.0, mean: 0.3736111111111111
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.8314941526126782
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5047      14680
+Genes of Interest        190        530
+Chi-square statistic: 0.19572493835791105, P-value from Chi-square test: 0.6581939093271303
+
+-------------------
+T. FASCICULATA CLUSTER 1
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.32275261465836486
+Genes of Interest median: 0.0, mean: 0.27848101265822783
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.8903839848743601
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              6265      18308
+Genes of Interest         20         59
+Chi-square statistic: 0.0, P-value from Chi-square test: 1.0
+
+For column 'EE':
+Background median: 0.0, mean: 0.18711594025963454
+Genes of Interest median: 0.0, mean: 0.20253164556962025
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.8067964733377986
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3963      20610
+Genes of Interest         14         65
+Chi-square statistic: 0.05354001416742768, P-value from Chi-square test: 0.8170140454883812
+
+For column 'CBS':
+Background median: 0.0, mean: 0.210637691775526
+Genes of Interest median: 0.0, mean: 0.24050632911392406
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.5234474644707788
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              4498      20075
+Genes of Interest         18         61
+Chi-square statistic: 0.7781312055411582, P-value from Chi-square test: 0.3777132935741162
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.36873804582265085
+Genes of Interest median: 0.0, mean: 0.6708860759493671
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.004775902354020967
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5881      18692
+Genes of Interest         33         46
+Chi-square statistic: 12.782436851734822, P-value from Chi-square test: 0.00034988884348443054
+
+-------------------
+T. FASCICULATA CLUSTER 2
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.32275261465836486
+Genes of Interest median: 0.0, mean: 0.32432432432432434
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.9359609728599263
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              6265      18308
+Genes of Interest         29         82
+Chi-square statistic: 0.0018467089288599036, P-value from Chi-square test: 0.9657227767412517
+
+For column 'EE':
+Background median: 0.0, mean: 0.18711594025963454
+Genes of Interest median: 0.0, mean: 0.1981981981981982
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.6486600434134255
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3963      20610
+Genes of Interest         21         90
+Chi-square statistic: 0.4466412513643313, P-value from Chi-square test: 0.5039343012223481
+
+For column 'CBS':
+Background median: 0.0, mean: 0.210637691775526
+Genes of Interest median: 0.0, mean: 0.17117117117117117
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.6723997953738001
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              4498      20075
+Genes of Interest         18         93
+Chi-square statistic: 0.19784071646684595, P-value from Chi-square test: 0.6564694318204409
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.36873804582265085
+Genes of Interest median: 0.0, mean: 0.2702702702702703
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.49938353107216293
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5881      18692
+Genes of Interest         23         88
+Chi-square statistic: 0.4624196425141891, P-value from Chi-square test: 0.49649531593051677
+
+-------------------
+T. FASCICULATA CLUSTER 3
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.32275261465836486
+Genes of Interest median: 0.0, mean: 0.2727272727272727
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.8585297111251508
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              6265      18308
+Genes of Interest          8         25
+Chi-square statistic: 0.0, P-value from Chi-square test: 1.0
+
+For column 'EE':
+Background median: 0.0, mean: 0.18711594025963454
+Genes of Interest median: 0.0, mean: 0.5757575757575758
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.0065994006981819195
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3963      20610
+Genes of Interest         14         19
+Chi-square statistic: 14.933717382523458, P-value from Chi-square test: 0.00011135492655545988
+
+For column 'CBS':
+Background median: 0.0, mean: 0.210637691775526
+Genes of Interest median: 0.0, mean: 0.36363636363636365
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.08778952053691216
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              4498      20075
+Genes of Interest         12         21
+Chi-square statistic: 6.024109590591727, P-value from Chi-square test: 0.014111749153663963
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.36873804582265085
+Genes of Interest median: 0.0, mean: 0.36363636363636365
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.8335405353569277
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5881      18692
+Genes of Interest          7         26
+Chi-square statistic: 0.026221183565353752, P-value from Chi-square test: 0.8713613216673999
+
+-------------------
+T. FASCICULATA CLUSTER 4
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.32275261465836486
+Genes of Interest median: 0.0, mean: 0.4065934065934066
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.3563730742931913
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              6265      18308
+Genes of Interest         28         63
+Chi-square statistic: 1.063840623279818, P-value from Chi-square test: 0.30234085951110873
+
+For column 'EE':
+Background median: 0.0, mean: 0.18711594025963454
+Genes of Interest median: 0.0, mean: 0.18681318681318682
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.9567993995855296
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3963      20610
+Genes of Interest         15         76
+Chi-square statistic: 0.0, P-value from Chi-square test: 1.0
+
+For column 'CBS':
+Background median: 0.0, mean: 0.210637691775526
+Genes of Interest median: 0.0, mean: 0.2857142857142857
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.19714267649672157
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              4498      20075
+Genes of Interest         24         67
+Chi-square statistic: 3.4219727759122582, P-value from Chi-square test: 0.06433409056936062
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.36873804582265085
+Genes of Interest median: 0.0, mean: 0.2967032967032967
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.9674735557013092
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5881      18692
+Genes of Interest         23         68
+Chi-square statistic: 0.031113777499708218, P-value from Chi-square test: 0.8599867912073078
+
+-------------------
+T. FASCICULATA CLUSTER 5
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.32275261465836486
+Genes of Interest median: 0.0, mean: 0.29015544041450775
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.49745148869654365
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              6265      18308
+Genes of Interest         44        149
+Chi-square statistic: 0.5987680781343213, P-value from Chi-square test: 0.43904844647277885
+
+For column 'EE':
+Background median: 0.0, mean: 0.18711594025963454
+Genes of Interest median: 0.0, mean: 0.27979274611398963
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.10515441064485398
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3963      20610
+Genes of Interest         44        149
+Chi-square statistic: 5.800641889915762, P-value from Chi-square test: 0.01602032501870538
+
+For column 'CBS':
+Background median: 0.0, mean: 0.210637691775526
+Genes of Interest median: 0.0, mean: 0.30569948186528495
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.12917160342787481
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              4498      20075
+Genes of Interest         47        146
+Chi-square statistic: 4.279368579115694, P-value from Chi-square test: 0.038577676812537154
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.36873804582265085
+Genes of Interest median: 0.0, mean: 0.35233160621761656
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.6351727654470658
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5881      18692
+Genes of Interest         51        142
+Chi-square statistic: 0.5232695608067727, P-value from Chi-square test: 0.46945030304330115
+
+-------------------
+T. FASCICULATA CLUSTER 6
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.32275261465836486
+Genes of Interest median: 0.0, mean: 0.32786885245901637
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.9916401158422182
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              6265      18308
+Genes of Interest         31         91
+Chi-square statistic: 0.0, P-value from Chi-square test: 1.0
+
+For column 'EE':
+Background median: 0.0, mean: 0.18711594025963454
+Genes of Interest median: 0.0, mean: 0.1885245901639344
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.940823037949593
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3963      20610
+Genes of Interest         19        103
+Chi-square statistic: 0.0018052241097645538, P-value from Chi-square test: 0.966109734333365
+
+For column 'CBS':
+Background median: 0.0, mean: 0.210637691775526
+Genes of Interest median: 0.0, mean: 0.10655737704918032
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.13119468102583456
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              4498      20075
+Genes of Interest         13        109
+Chi-square statistic: 4.2586141934127415, P-value from Chi-square test: 0.039051766808600966
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.36873804582265085
+Genes of Interest median: 0.0, mean: 0.30327868852459017
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.41138450887941835
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5881      18692
+Genes of Interest         24         98
+Chi-square statistic: 0.9883806316076332, P-value from Chi-square test: 0.320138484596183
+
+-------------------
+T. FASCICULATA CLUSTER 7
+-------------------
+
+For column 'MOE':
+Background median: 0.0, mean: 0.32275261465836486
+Genes of Interest median: 0.0, mean: 0.2958579881656805
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.5625673546195551
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              6265      18308
+Genes of Interest         38        131
+Chi-square statistic: 0.6504149714892569, P-value from Chi-square test: 0.4199643554957344
+
+For column 'EE':
+Background median: 0.0, mean: 0.18711594025963454
+Genes of Interest median: 0.0, mean: 0.15384615384615385
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.41968879388167746
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              3963      20610
+Genes of Interest         21        148
+Chi-square statistic: 1.4392415550519095, P-value from Chi-square test: 0.23026211274734007
+
+For column 'CBS':
+Background median: 0.0, mean: 0.210637691775526
+Genes of Interest median: 0.0, mean: 0.30177514792899407
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.048760737085055676
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              4498      20075
+Genes of Interest         46        123
+Chi-square statistic: 8.311599085638846, P-value from Chi-square test: 0.0039392694130784105
+
+For column 'G-Box':
+Background median: 0.0, mean: 0.36873804582265085
+Genes of Interest median: 0.0, mean: 0.41420118343195267
+Test used for comparing distributions: Wilcoxon rank-sum test
+P-value from Wilcoxon rank-sum test: 0.7744115899257198
+Contingency Table (Counts > 0 vs Counts = 0):
+                   Count > 0  Count = 0
+Background              5881      18692
+Genes of Interest         43        126
+Chi-square statistic: 0.13564396891329206, P-value from Chi-square test: 0.7126504848218183
