@@ -21,4 +21,8 @@ The repository is subdivided in following categories:
 
 **8. RNA-seq experiment 6 time points: DGE Analyses of a climate chamber experiment to explore expression differences between *T. leiboldiana* and *T. fasciculata*.**
 
-**9. Combined analyses of differential gene expression, TE activity and gene family expansion.**
+**9. Promotor analyses: studying circadian clock-related transcription factor binding motifs in the upstream regions of DE and CAM-related genes.**
+
+**10. Combined analyses of differential gene expression, TE activity and gene family expansion.**
+
+**11. Metabolomics: visualization and statistics on mass-spec compund abundance data related to CAM**
