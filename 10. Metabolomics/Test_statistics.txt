@@ -1,0 +1,6 @@
+Test: Are malate accumulations significantly different between species?
+Wilcoxon rank sum exact test
+
+data:  Malate_diff by species
+W = 34, p-value = 0.008658
+alternative hypothesis: true location shift is not equal to 0

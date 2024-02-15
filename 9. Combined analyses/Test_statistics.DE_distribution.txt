@@ -1,0 +1,31 @@
+1. Test: Are DE gene counts per scaffold normally distributed in T. fasciculata:
+
+	Shapiro-Wilk normality test
+	data:  merged_Tfas$DE_counts
+	W = 0.98034, p-value = 0.8917
+
+2. Test: Are DE gene counts per scaffold normally distributed in T. leiboldiana:
+
+	Shapiro-Wilk normality test
+	data:  merged_Tlei$DE_counts
+	W = 0.90213, p-value = 0.01748
+
+3. Test: Are per-scaffold DE gene counts correlated with scaffold size in T. fasciculata?
+
+	Kendall's rank correlation tau
+	data:  merged_Tfas$DE_counts and merged_Tfas$size
+	z = 2.5478, p-value = 0.01084
+	alternative hypothesis: true tau is not equal to 0
+	sample estimates:
+	      tau
+	0.3651637
+
+4. Test: Are per-scaffold DE gene counts correlated with scaffold size in T. leiboldiana?
+
+	Kendall's rank correlation tau
+	data:  merged_Tlei$DE_counts and merged_Tlei$size
+	z = 3.2054, p-value = 0.001349
+	alternative hypothesis: true tau is not equal to 0
+	sample estimates:
+	      tau
+	0.4531803

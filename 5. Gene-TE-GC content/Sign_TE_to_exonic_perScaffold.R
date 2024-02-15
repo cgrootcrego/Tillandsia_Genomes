@@ -1,4 +1,4 @@
-setwd("/Users/clara/Documents/GitHub/Tillandsia-compgenomics/4. Gene_TE_content/")
+setwd("/Users/clara/Documents/GitHub.nosync/Tillandsia-compgenomics/4. Gene_TE_content/")
 library(ggplot2)
 library(tidyverse)
 #install.packages("ggpubr")

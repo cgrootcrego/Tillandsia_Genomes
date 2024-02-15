@@ -29,4 +29,4 @@ We ran [maSigPro](https://www.bioconductor.org/packages/devel/bioc/vignettes/maS
 
 The steps for differential gene expression are as follows: we normalize the data in EdgeR and remove all genes with a mean(cpm) < 1. Then, we create the design matrix, containing the time points, replicates and the experimental groups (species). MaSigPro then identifies differentially expressed (DE) genes across time and species.
 
-GO term enrichment was performed on all DE genes and each cluster separately with the automated script in 6. The raw GO term enrichment results for both species are available in Results. Expression curves of DE genes were drawn using `10_Script_Expression_curves_modules_maSigPro.R`.
+GO term enrichment was performed on all DE genes and each cluster separately with the automated script in 6. The raw GO term enrichment results for both species are available in Results. Expression curves of DE genes were drawn using `10_Script_Expression_curves_modules_maSigPro.R`. Heatmap was plotted with script `11_Expression_Heatmap_FamilySpecific.z-scores.R`.

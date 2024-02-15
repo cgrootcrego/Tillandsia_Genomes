@@ -2,6 +2,10 @@
 
 Here is the pipeline for all combinatory analyses performed on the output of several previous analyses together.
 
+## Distribution of DE genes
+
+Stats on DE gene distribution across both genomes were calculated in `GetDistributionStats_DEgenes.R`. Statistical test results are in `Test_statistics.DE_distribution.txt`.
+
 ## Gene duplication in DE genes
 
 The proportion of DE orthogroups belonging to different relative size classes was obtained with `01_get_duplication_stats.sh`. The significance of the differences in proportion between all orthogroups and DE orthogroups was studied in `02_Significance_duplication.R`. Gene family expansion in families underlying enriched GO terms were visualized in `03_Script_GOterm_figure.R` using [GOplot](https://wencke.github.io/).

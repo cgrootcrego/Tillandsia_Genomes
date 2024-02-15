@@ -1,0 +1,129 @@
+-----------------
+# IN T. FASCICULATA
+-----------------
+
+1. Test: Are per-window gene counts normally distributed in T. fasciculata?
+
+	Shapiro-Wilk normality test
+	data:  all_Tfas$gene_counts
+	W = 0.82394, p-value < 2.2e-16
+
+2. Test: Is per-window TE content normally distributed in T. fasciculata?
+
+	Shapiro-Wilk normality test
+	data:  all_Tfas$TE_content
+	W = 0.90161, p-value < 2.2e-16
+
+3. Test: Is per-window CC content normally distributed in T. fasciculata?
+
+	Shapiro-Wilk normality test
+	data:  all_Tfas$GC_content
+	W = 0.74147, p-value < 2.2e-16
+
+4. Test: Are per-window gene counts correlated with TE content?
+
+	Kendall's rank correlation tau
+	data:  all_Tfas$gene_counts and all_Tfas$TE_content
+	z = -28.926, p-value < 2.2e-16
+	alternative hypothesis: true tau is not equal to 0
+	sample estimates:
+       	tau
+	-0.7866569
+
+5. Test: Are per-window gene counts correlated with GC content?
+
+	Kendall's rank correlation tau
+	data:  all_Tfas$gene_counts and all_Tfas$GC_content
+	z = -25.059, p-value < 2.2e-16
+	alternative hypothesis: true tau is not equal to 0
+	sample estimates:
+       	tau
+	-0.6815129
+
+6. Test: Is per-window GC content correlated with TE content?
+
+Kendall's rank correlation tau
+data:  all_Tfas$TE_content and all_Tfas$GC_content
+z = 29.394, p-value < 2.2e-16
+alternative hypothesis: true tau is not equal to 0
+sample estimates:
+      tau
+0.7930836
+
+-----------------
+# IN T. LEIBOLDIANA
+-----------------
+
+1. Test: Are per-window gene counts normally distributed in T. leiboldiana?
+
+	Shapiro-Wilk normality test
+	data:  all_Tlei$gene_counts
+	W = 0.69691, p-value < 2.2e-16
+
+2. Test: Is per-window TE content normally distributed in T. leiboldiana?
+	Shapiro-Wilk normality test
+	data:  all_Tlei$TE_content
+	W = 0.80112, p-value < 2.2e-16
+
+3. Test: Is per-window CC content normally distributed in T. leiboldiana?
+	Shapiro-Wilk normality test
+	data:  all_Tlei$GC_content
+	W = 0.74204, p-value < 2.2e-16
+
+4. Test: Are per-window gene counts correlated with TE content?
+
+	Kendall's rank correlation tau
+	data:  all_Tlei$gene_counts and all_Tlei$TE_content
+	z = -36.616, p-value < 2.2e-16
+	alternative hypothesis: true tau is not equal to 0
+	sample estimates:
+	       tau
+	-0.8220984
+
+5. Test: Are per-window gene counts correlated with GC content?
+
+	Kendall's rank correlation tau
+	data:  all_Tlei$gene_counts and all_Tlei$GC_content
+	z = -31.531, p-value < 2.2e-16
+	alternative hypothesis: true tau is not equal to 0
+	sample estimates:
+	       tau
+	-0.7079335
+
+6. Test: Is per-window GC content correlated with TE content?
+
+	Kendall's rank correlation tau
+	data:  all_Tlei$TE_content and all_Tlei$GC_content
+	z = 35.313, p-value < 2.2e-16
+	alternative hypothesis: true tau is not equal to 0
+	sample estimates:
+	      tau
+	0.7776291
+
+----
+Per Scaffold TE to exonic ratios
+----
+1. Test: Are per-scaffold exon-to-TE ratios normally distributed?
+
+	Shapiro-Wilk test:
+	# A tibble: 2 × 4
+	  species       variable          statistic     p
+	  <chr>         <chr>                 <dbl> <dbl>
+	1 T.fasciculata rep_to_exon_ratio     0.974 0.745
+	2 T.leiboldiana rep_to_exon_ratio     0.953 0.278
+
+2. Test: Are variances equal?
+
+	Levene's Test:
+	# A tibble: 1 × 4
+    df1   df2 statistic           p
+  	<int> <int>     <dbl>       <dbl>
+	1     1    49      32.5 0.000000678
+
+3. Test: Is the repetitive-to-exonic content ratio per scaffold significantly different between Tfas and Tlei?
+
+	Mann-Whitney U Test:
+	# A tibble: 1 × 9
+	#.y.               group1        group2           n1    n2 statistic    df        p p.signif
+	#* <chr>             <chr>         <chr>         <int> <int>     <dbl> <dbl>    <dbl> <chr>
+	#  1 rep_to_exon_ratio T.fasciculata T.leiboldiana    25    26     -4.00  27.6 0.000433 ***

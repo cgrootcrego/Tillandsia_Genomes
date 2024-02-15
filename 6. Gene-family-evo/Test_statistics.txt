@@ -1,0 +1,6 @@
+Test: Are per-orthogroup gene counts in T.fasciculata different from those in T. leiboldiana?
+
+	Wilcoxon rank sum test with continuity correction
+	data:  counts_Tfas_Tlei_multi$Tfas and counts_Tfas_Tlei_multi$Tlei
+	W = 2410695, p-value = 8.754e-16
+	alternative hypothesis: true location shift is not equal to 0
