@@ -79,9 +79,9 @@ cat(paste0("\nWITHOUT LENGTH CORRECTION:\nMann-Whitney U test of intronic TE ins
            med_non_DE2, "\tmean:", mea_non_DE2,"\n"))
 
 # Calculate whether the percentage of genes with a TE insertion is significantly higher in DE genes
-contingency <- data.frame(rbind(c(sum(counts$te_counts == 0),
+contingency <- data.frame(rbind(c(sum(counts[counts$type == "total",]$te_counts == 0),
                                     sum(counts[counts$type == "subset",]$te_counts == 0)),
-                                  c(sum(counts$te_counts != 0),
+                                  c(sum(counts[counts$type == "total",]$te_counts != 0),
                                     sum(counts[counts$type == "subset",]$te_counts != 0))))
 colnames(contingency) <- c("total", "subset")
 rownames(contingency) <- c("no_te", "te")
