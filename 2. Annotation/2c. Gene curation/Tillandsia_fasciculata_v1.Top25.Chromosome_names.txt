@@ -1,26 +1,26 @@
-Name_in_GFF Name_in_study length (bp)  Fasta_header_NCBI
-Scaffold_2199	Tfas_chr1	32162447	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_658	Tfas_chr2	31698969	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2318	Tfas_chr3	31153634	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2041	Tfas_chr4	30972320	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2096	Tfas_chr5	30145683	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2315	Tfas_chr6	29567185	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2317	Tfas_chr7	27230796	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2287	Tfas_chr8	27210704	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_326	Tfas_chr9	26509606	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_1174	Tfas_chr10	26021936	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2314	Tfas_chr11	25842354	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2313	Tfas_chr12	25341332	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2225	Tfas_chr13	24881768	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_1383	Tfas_chr14	24649150	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_819	Tfas_chr15	23784123	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_15	Tfas_chr16	23642332	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2073	Tfas_chr17	21704838	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2321	Tfas_chr18	21234157	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2320	Tfas_chr19	19440187	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_346	Tfas_chr20	19367790	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_845	Tfas_chr21	18018563	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2316	Tfas_chr22	17107477	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2312	Tfas_chr23	16741216	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_53	Tfas_chr24	13520883	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
-Scaffold_2319	Tfas_chr25	12332728	>JAQOTM010000001.1 Tillandsia fasciculata voucher WU:0013642 isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
+Name_in_GFF 	Name_in_study 	length (bp)  	Fasta_header_NCBI
+Scaffold_2199	Tfas_chr1	32162447	>CM054930.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 1, whole genome shotgun sequence
+Scaffold_658	Tfas_chr2	31698969	>CM054931.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 2, whole genome shotgun sequence
+Scaffold_2318	Tfas_chr3	31153634	>CM054932.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 3, whole genome shotgun sequence
+Scaffold_2041	Tfas_chr4	30972320	>CM054933.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 4, whole genome shotgun sequence
+Scaffold_2096	Tfas_chr5	30145683	>CM054934.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 5, whole genome shotgun sequence
+Scaffold_2315	Tfas_chr6	29567185	>CM054935.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 6, whole genome shotgun sequence
+Scaffold_2317	Tfas_chr7	27230796	>CM054936.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 7, whole genome shotgun sequence
+Scaffold_2287	Tfas_chr8	27210704	>CM054937.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 8, whole genome shotgun sequence
+Scaffold_326	Tfas_chr9	26509606	>CM054938.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 9, whole genome shotgun sequence
+Scaffold_1174	Tfas_chr10	26021936	>CM054939.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 10, whole genome shotgun sequence
+Scaffold_2314	Tfas_chr11	25842354	>CM054940.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 11, whole genome shotgun sequence
+Scaffold_2313	Tfas_chr12	25341332	>CM054941.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 12, whole genome shotgun sequence
+Scaffold_2225	Tfas_chr13	24881768	>CM054942.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 13, whole genome shotgun sequence
+Scaffold_1383	Tfas_chr14	24649150	>CM054943.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 14, whole genome shotgun sequence
+Scaffold_819	Tfas_chr15	23784123	>CM054944.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 15, whole genome shotgun sequence
+Scaffold_15	Tfas_chr16	23642332	>CM054945.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 16, whole genome shotgun sequence
+Scaffold_2073	Tfas_chr17	21704838	>CM054946.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 17, whole genome shotgun sequence
+Scaffold_2321	Tfas_chr18	21234157	>CM054947.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 18, whole genome shotgun sequence
+Scaffold_2320	Tfas_chr19	19440187	>CM054948.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 19, whole genome shotgun sequence
+Scaffold_346	Tfas_chr20	19367790	>CM054949.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 20, whole genome shotgun sequence
+Scaffold_845	Tfas_chr21	18018563	>CM054950.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 21, whole genome shotgun sequence
+Scaffold_2316	Tfas_chr22	17107477	>CM054951.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 22, whole genome shotgun sequence
+Scaffold_2312	Tfas_chr23	16741216	>CM054952.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 23, whole genome shotgun sequence
+Scaffold_53	Tfas_chr24	13520883	>CM054953.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 24, whole genome shotgun sequence
+Scaffold_2319	Tfas_chr25	12332728	>CM054954.1 Tillandsia fasciculata isolate MHJB-B1840 chromosome 25, whole genome shotgun sequence

@@ -1,2 +1,4 @@
 Tillandsia_fasciculata_v1.gff filter=lfs diff=lfs merge=lfs -text
 Tillandsia_leiboldiana_v1.gff filter=lfs diff=lfs merge=lfs -text
+GCA_029168755.2_TFas_v1.1_genomic.scaffold_names_for_gff.fna filter=lfs diff=lfs merge=lfs -text
+GCA_029204045.2_TLei_v1.1_genomic.scaffold_names_for_gff.fna filter=lfs diff=lfs merge=lfs -text

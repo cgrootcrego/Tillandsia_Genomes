@@ -1,27 +1,27 @@
 Name_in_GFF	Name_in_study	Length (bp)	Fasta_header_NCBI
-Scaffold_8399	Tlei_chr1	60417217	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 1, whole genome shotgun sequence
-Scaffold_10370	Tlei_chr2	57132681	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 2, whole genome shotgun sequence
-Scaffold_247	Tlei_chr3	55693152	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 3, whole genome shotgun sequence
-Scaffold_4655	Tlei_chr4	55355978	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 4, whole genome shotgun sequence
-Scaffold_10302	Tlei_chr5	54835787	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 5, whole genome shotgun sequence
-Scaffold_10429	Tlei_chr6	52333425	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 6, whole genome shotgun sequence
-Scaffold_5555	Tlei_chr7	52290719	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 7, whole genome shotgun sequence
-Scaffold_9938	Tlei_chr8	51368336	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 8, whole genome shotgun sequence
-Scaffold_4582	Tlei_chr9	50270259	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 9, whole genome shotgun sequence
-Scaffold_7805	Tlei_chr10	48367378	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 10, whole genome shotgun sequence
-Scaffold_269	Tlei_chr11	45933410	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 11, whole genome shotgun sequence
-Scaffold_6112	Tlei_chr12	43354870	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 12, whole genome shotgun sequence
-Scaffold_10423	Tlei_chr13	39222561	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 13, whole genome shotgun sequence
-Scaffold_7317	Tlei_chr14	38474115	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 14, whole genome shotgun sequence
-Scaffold_4198	Tlei_chr15	34590513	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 15, whole genome shotgun sequence
-Scaffold_7315	Tlei_chr16	30260857	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 16, whole genome shotgun sequence
-Scaffold_10425	Tlei_chr17	28860503	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 17, whole genome shotgun sequence
-Scaffold_10428	Tlei_chr18	26162001	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 18, whole genome shotgun sequence
-Scaffold_10433	Tlei_chr19	20449340	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 19, whole genome shotgun sequence
-Scaffold_612	Tlei_chr20	18294627	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 20, whole genome shotgun sequence
-Scaffold_10430	Tlei_chr21	11471721	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 21, whole genome shotgun sequence
-Scaffold_10431	Tlei_chr22	10199391	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 22, whole genome shotgun sequence
-Scaffold_10426	Tlei_chr23	9804442	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 23, whole genome shotgun sequence
-Scaffold_10432	Tlei_chr24	8346026	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 24, whole genome shotgun sequence
-Scaffold_10424	Tlei_chr25	1986623	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 25, whole genome shotgun sequence
-Scaffold_10427	Tlei_chr26	991997	>JAQNDB010000001.1 Tillandsia leiboldiana voucher WU:0003058 isolate MHJB-B1842 chromosome 26, whole genome shotgun sequence
+Scaffold_8399	Tlei_chr1	60417217	>CM055060.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 1, whole genome shotgun sequence
+Scaffold_10370	Tlei_chr2	57132681	>CM055061.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 2, whole genome shotgun sequence
+Scaffold_247	Tlei_chr3	55693152	>CM055062.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 3, whole genome shotgun sequence
+Scaffold_4655	Tlei_chr4	55355978	>CM055063.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 4, whole genome shotgun sequence
+Scaffold_10302	Tlei_chr5	54835787	>CM055064.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 5, whole genome shotgun sequence
+Scaffold_10429	Tlei_chr6	52333425	>CM055065.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 6, whole genome shotgun sequence
+Scaffold_5555	Tlei_chr7	52290719	>CM055066.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 7, whole genome shotgun sequence
+Scaffold_9938	Tlei_chr8	51368336	>CM055067.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 8, whole genome shotgun sequence
+Scaffold_4582	Tlei_chr9	50270259	>CM055068.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 9, whole genome shotgun sequence
+Scaffold_7805	Tlei_chr10	48367378	>CM055069.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 10, whole genome shotgun sequence
+Scaffold_269	Tlei_chr11	45933410	>CM055070.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 11, whole genome shotgun sequence
+Scaffold_6112	Tlei_chr12	43354870	>CM055071.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 12, whole genome shotgun sequence
+Scaffold_10423	Tlei_chr13	39222561	>CM055072.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 13, whole genome shotgun sequence
+Scaffold_7317	Tlei_chr14	38474115	>CM055073.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 14, whole genome shotgun sequence
+Scaffold_4198	Tlei_chr15	34590513	>CM055074.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 15, whole genome shotgun sequence
+Scaffold_7315	Tlei_chr16	30260857	>CM055075.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 16, whole genome shotgun sequence
+Scaffold_10425	Tlei_chr17	28860503	>CM055076.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 17, whole genome shotgun sequence
+Scaffold_10428	Tlei_chr18	26162001	>CM055077.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 18, whole genome shotgun sequence
+Scaffold_10433	Tlei_chr19	20449340	>CM055078.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 19, whole genome shotgun sequence
+Scaffold_612	Tlei_chr20	18294627	>CM055079.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 20, whole genome shotgun sequence
+Scaffold_10430	Tlei_chr21	11471721	>CM055080.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 21, whole genome shotgun sequence
+Scaffold_10431	Tlei_chr22	10199391	>CM055081.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 22, whole genome shotgun sequence
+Scaffold_10426	Tlei_chr23	9804442	>CM055082.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 23, whole genome shotgun sequence
+Scaffold_10432	Tlei_chr24	8346026	>CM055083.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 24, whole genome shotgun sequence
+Scaffold_10424	Tlei_chr25	1986623	>CM055084.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 25, whole genome shotgun sequence
+Scaffold_10427	Tlei_chr26	991997	>CM055085.1 Tillandsia leiboldiana isolate MHJB-B1842 chromosome 26, whole genome shotgun sequence
